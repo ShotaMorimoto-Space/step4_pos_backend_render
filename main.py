@@ -18,3 +18,7 @@ app.add_middleware(
 # ルーターを登録
 app.include_router(product.router)
 app.include_router(purchase.router)
+
+@app.get("/")
+def read_root():
+    return {"message": "OK"}
